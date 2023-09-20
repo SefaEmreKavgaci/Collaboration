@@ -3,13 +3,13 @@ import java.util.Random;
 public class HW {
 
     public static void main(String[] args) {
-        
+
     }
 
-    public int[] arrayCreater(int length){
+    public int[] arrayCreater(int length) {
         int[] result = new int[length];
 
-        for(int i = 0; i < length; i++){
+        for (int i = 0; i < length; i++) {
             Random rand = new Random();
 
             int num = rand.nextInt(101);
@@ -17,5 +17,29 @@ public class HW {
         }
 
         return result;
+    }
+
+    public int maxReturner(int[] array) {
+        int max = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+
+        return max;
+    }
+
+    public int minReturner(int[] array) {
+        int min = 100;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+
+        return min;
     }
 }
